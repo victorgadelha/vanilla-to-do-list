@@ -11,7 +11,7 @@
     "rules": {
         "indent": [
             "error",
-            "tab"
+            4
         ],
         "linebreak-style": [
             "error",
@@ -24,6 +24,10 @@
         "semi": [
             "error",
             "always"
+        ],
+        "comma-spacing": [
+            "error",
+            { "before": false, "after": true }
         ]
     }
 }
