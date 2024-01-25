@@ -1,7 +1,8 @@
 const connection = require('../database/connection');
 
-const getAll = () => {
-    const tasks = connection.execute('SELECT * FROM tasks')
+const getAll = async () => {
+    const tasks = await connection.execute('SELECT * FROM tasks');
+    return tasks;
 };
 
 module.exports = {
