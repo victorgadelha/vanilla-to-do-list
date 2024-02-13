@@ -1,5 +1,7 @@
-const getAll = (req, res) => {
-    return res.status(200).json({ message: 'controller está tudo certo.' });
+const tasksModel = require('../models/Task');
+const getAll = async (req, res) => {
+    const tasks = await tasksModel.getAll();
+    return res.status(200).json(tasks);
 };
 
 module.exports = {
